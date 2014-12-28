@@ -91,7 +91,7 @@ public class SpringLoadedPreProcessor implements Constants {
 		
 		// Related to serialization
 		// TODO [serialization] Caches in ObjectStreamClass for descriptors, need clearing on reload
-		systemClassesContainingReflection.add("java/io/ObjectStreamClass");
+		//systemClassesContainingReflection.add("java/io/ObjectStreamClass"); //This line breaks infinispan loading
 		systemClassesContainingReflection.add("java/io/ObjectStreamClass$EntryFuture");
 		
 		// Don't need this right now, instead we are not removing 'final' from the serialVersionUID
